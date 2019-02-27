@@ -1,0 +1,6 @@
+<h2>TodoList</h2>
+<app-todo-reduce 
+*ngFor="let todoItem of todosArray" 
+[todoInput]="todoItem"
+(onCheckTodoEvent)="onCheckToDoFromReduce($event)"
+></app-todo-reduce>

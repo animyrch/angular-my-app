@@ -1,0 +1,11 @@
+<div *ngIf="!todoInput.done">
+  <h3>
+    {{ todoInput.title }}
+  </h3>
+  <p> {{ todoInput.done }} </p>
+  <p> {{ todoInput.creationDate }} </p>
+
+  <button 
+  (click)="onCheckTodo(todoInput)"
+  [disabled]="todoInput?.done">Check todo</button>
+</div>
