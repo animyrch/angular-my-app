@@ -22,8 +22,8 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
     console.log(`============> oninit pour TodoListComponent` , this.todosArray);
   }
-  onCheckToDoFromReduce(checkedToDo:Todo){
-    console.log(`============> pour onCheckToDoFromReduce` , checkedToDo);
+  receiveEvent(checkedToDo:Todo){
+    console.log(`============> pour receiveEvent` , checkedToDo);
     checkedToDo.done = true;
   }
 }

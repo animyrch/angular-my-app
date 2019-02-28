@@ -9,7 +9,7 @@ import { Todo } from '../interface/todo.interface';
 export class TodoReduceComponent implements OnInit {
 
   @Input() todoInput:Todo;
-  @Output() onCheckToDoEvent: EventEmitter<Todo> = new EventEmitter();
+  @Output() onCheckToDo: EventEmitter<Todo> = new EventEmitter();
 
   constructor() { }
 
@@ -17,8 +17,9 @@ export class TodoReduceComponent implements OnInit {
     console.log(`============> oninit pour TodoReduceComponent`);
   }
 
-  onCheckTodo = (params) => {
-    console.log(`============>  pour onCheckTodo`);
-    this.onCheckToDoEvent.emit(this.todoInput);
+  onCheckTodoEvent = (params) => {
+    console.log(`============>  pour onCheckTodo`, params);
+    console.log(this.todoInput);
+    this.onCheckToDo.emit(params);
   }
 }

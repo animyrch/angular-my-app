@@ -2,5 +2,5 @@
 <app-todo-reduce 
 *ngFor="let todoItem of todosArray" 
 [todoInput]="todoItem"
-(onCheckTodoEvent)="onCheckToDoFromReduce($event)"
+(onCheckTodo)="receiveEvent($event)"
 ></app-todo-reduce>
